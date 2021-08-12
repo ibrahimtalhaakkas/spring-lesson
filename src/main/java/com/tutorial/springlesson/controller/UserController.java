@@ -1,5 +1,6 @@
 package com.tutorial.springlesson.controller;
 
+import com.tutorial.springlesson.model.User;
 import com.tutorial.springlesson.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,10 +31,12 @@ public class UserController {
     }
 
     // CRUD -> create, read, update, delete
-    @GetMapping("/hello") //Read
-    public String sayHello() {
-        return userService.getSayHelloContent();
+    @GetMapping("/user") //Read
+    public User getUser() {
+        return userService.getUser();
     }
 
+//TODO: create an API that returns a userlist.
 }
+
 
